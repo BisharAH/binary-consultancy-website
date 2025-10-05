@@ -1,22 +1,28 @@
-import Home from "../src/components/Home"
-import Footer from '../src/components/Footer'
-import About from '../src/components/About'
-import Navbar from '../src/components/Navbar'
-import Services from '../src/components/Services'
-function App() {
-  
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar';
+import Home from "./components/Home";
+import Services from "./components/Services";
+import About from "./components/About";
+import Contact from "./components/ContactForm";
+import Footer from "./components/Footer";
 
+function App() {
   return (
-    <>
-      <Navbar />
-      <Home />
-      <Footer />
-      <About />
-      <Services />
-      
-      
-    </>
-  )
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow p-6">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

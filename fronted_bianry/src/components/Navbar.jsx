@@ -7,8 +7,9 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
+  
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-gray-800"><img src="" alt="" /></h1>
+        <h1 className="text-2xl font-bold text-gray-800">Binery Consultant</h1>
         <div className="hidden md:flex space-x-6">
           <a href="#services" className="text-gray-600 hover:text-blue-600">Services</a>
           <a href="#training" className="text-gray-600 hover:text-blue-600">Training</a>
